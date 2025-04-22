@@ -31,7 +31,8 @@ class MultiNodesSubscriber : public rclcpp::Node
 {
 public:
 MultiNodesSubscriber(size_t index)
-  : Node("node_sub_" + std::to_string(index))
+  : Node("node_sub_" + std::to_string(index),
+  rclcpp::NodeOptions().enable_rosout(false).start_parameter_services(false))
   {
     subscriber_ = this->create_subscription<std_msgs::msg::Float64>(
       "topic_" + std::to_string(index),

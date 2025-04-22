@@ -31,7 +31,8 @@ class MultiNodesPublisher : public rclcpp::Node
 {
 public:
 MultiNodesPublisher(size_t index)
-  : Node("node_pub_" + std::to_string(index))
+  : Node("node_pub_" + std::to_string(index),
+  rclcpp::NodeOptions().enable_rosout(false).start_parameter_services(false))
   {
     publisher_ = this->create_publisher<std_msgs::msg::Float64>(
       "topic_" + std::to_string(index), 10);
