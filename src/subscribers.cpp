@@ -88,7 +88,7 @@ int main(int argc, char * argv[])
 
   rclcpp::init(argc, argv);
 
-  rclcpp::executors::MultiThreadedExecutor executor;
+  rclcpp::executors::SingleThreadedExecutor executor;
   std::unordered_set<std::shared_ptr<MultiNodesSubscriber>> nodes;
 
   for (size_t i = 1; i <= num_nodes; ++i) {
