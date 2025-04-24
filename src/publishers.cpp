@@ -46,7 +46,7 @@ MultiNodesPublisher(size_t index)
             this->flag_,
             [this]() {
               RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "%s: subscriber is "
-              "connected and start to publisher message.", this->publisher_->get_topic_name());
+              "connected and start to publish message.", this->publisher_->get_topic_name());
             });
         }
 
