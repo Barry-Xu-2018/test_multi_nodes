@@ -1,6 +1,6 @@
 # test_multi_nodes
 Create specified number of nodes to evaluate the connection and data reception between publishers and subscribers in each node.  
-`publishers` create specified number of nodes and create a publisher in each node. While a subscriber is connected, the publisher sends 240 messages at a rate of one message every 500ms.
+`publishers` create specified number of nodes and create a publisher in each node. While a subscriber is connected, the publisher sends 120 messages at a rate of 1 messages every 500ms.
 `subscribers` create specified number of nodes and create a subscriber in each node.
 
 ## How to build
